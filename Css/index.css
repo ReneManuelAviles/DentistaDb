@@ -20,10 +20,121 @@
     width: 320px;
 }
 /*=======Informacion=======*/
+.information{
+    display: block;
+    height: 100vh;
+    
+    
+    position: relative;
+    overflow: hidden;
+}
+.animacion{
+    z-index: 1;
+}
+span.dos,
+span.tres,
+span.uno{
+    border: 0;
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    animation: vuela 7s linear infinite normal both;
+}
+span.uno{
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    bottom: -100px;
+}
+span.dos{
+    width: 70px;
+    height: 70px;
+    background-color: #cacaca;
+    bottom: -70px;
+}
+span.tres{
+    width: 50px;
+    height: 50px;
+    background-color: #878787;
+    bottom: -50px;
+}
+span.cuatro{
+    width: 20px;
+    height: 20px;
+    background-color: #7d7d7d;
+    bottom: -20px;
+}
+@keyframes vuela{
+    from{
+        transform: rotate(0deg);
+        bottom: 0;
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    to{
+        transform: rotate(360deg);
+        bottom: calc(100% + 100px);
+    }
+}
+.animacion span:nth-child(1){
+    left: 20%;
+    animation-delay: 4s;
+}
+.animacion span:nth-child(2){
+    left: 50%;
+    animation-delay: .5s;
+}
+.animacion span:nth-child(3){
+    left: 35%;
+    animation-delay: 5s;
+}
+.animacion span:nth-child(4){
+    left: 75%;
+    animation-delay: 1s;
+}
+.animacion span:nth-child(6){
+    left: 85%;
+    animation-delay: 3s;
+}
+.animacion span:nth-child(7){
+    left: 90%;
+    animation-delay: 5s;
+}
+.animacion span:nth-child(8){
+    left: 65%;
+}
+.animacion span:nth-child(9){
+    left: 60%;
+}
+.animacion span:nth-child(10){
+    left: 1%;
+    animation-delay: 6s;
+
+}
+.animacion span:nth-child(11){
+    left: 10%;
+}
+.animacion span:nth-child(12){
+    left: 10%;
+    animation-delay: 3s;
+}
+
+
 
 .information_container{
     flex-direction:row-reverse;
     gap: 3rem;
+    
+
 }
 
 .information_title{
@@ -35,6 +146,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    z-index: 1;
+    
 }
 
 
@@ -64,6 +177,7 @@
     border-radius: 3.7rem 0rem;
     width: 100%;
     height: 80%;
+    z-index: 1;
 }
 
 .information_img-content img{
@@ -89,6 +203,56 @@
     max-width: max-content;
     z-index: 1;
 }
+@media screen and (max-width: 768px){
+    :root{
+        /* tipografia  */
+        --big-size: 3rem;
+        --h1-size: 2.5rem;
+        --h2-size: 2rem;
+        --h3-size: 1.5rem;
+        --h4-size: 1rem;
+        --h5-size: .7rem;
+        --text-size: .5rem;
+    }
+
+    .flex{
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .navbar_menu{
+        position: fixed;
+        top: -100rem;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+    }
+
+    .navbar_menu_show{
+        top: 0;
+    }
+
+    .navbar_toogle{
+        display: block;
+    }
+    .navbar_close{
+        display: block;
+    }
+    
+    .information_content{
+        display: flex;
+        
+        gap: 1.5rem;
+        z-index: 1;
+    }
+    
+
+}
+
+
+
 
 
 
