@@ -22,8 +22,6 @@
 /*=======Informacion=======*/
 .information{
     display: block;
-    height: 100vh;
-    
     
     position: relative;
     overflow: hidden;
